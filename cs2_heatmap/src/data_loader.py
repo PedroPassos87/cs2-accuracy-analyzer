@@ -1,17 +1,11 @@
-import pandas as pd
-from awpy import Demo
+from awpy.demo import Demo
 
-def parse_demo(caminho_demo: str) -> dict:
-    """
-    Carrega e faz o parse de um arquivo de demo do CS, retornando os dados em um dicionário.
-    """
+def parse_demo(caminho_demo: str) -> Demo | None:
     print(f"Iniciando o parse da demo: {caminho_demo}...")
     try:
-        # Usamos o parse_rate=128 para uma boa granularidade de posições
-        dem = Demo(demofile=caminho_demo,verbose=False)
-        data = dem.parse()
-        print("Parse da demo concluído com sucesso!")
-        return data
+        demo_obj = Demo(path=caminho_demo, verbose=False)
+        print("Objeto Demo criado com sucesso!")
+        return demo_obj
     except Exception as e:
-        print(f"Ocorreu um erro ao fazer o parse da demo: {e}")
+        print(f"Ocorreu um erro ao carregar a demo: {e}")
         return None
