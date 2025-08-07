@@ -1,9 +1,0 @@
-{
-  "caminho_demo": "demos/mirage_inatel_suns.dem",
-  "nome_mapa": "de_mirage",
-  "caminho_imagem_mapa": "assets/mapas/de_mirage.png",
-  "tipo_analise": "posicionamento_jogador",
-  "nome_jogador": "Allvez",
-  "lado": "CT",
-  "caminho_saida": "outputs/heatmaps_posicionamento/mirage_Allvez_ct_heatmap.png"
-}
